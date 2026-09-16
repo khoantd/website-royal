@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
-import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -38,14 +37,9 @@ export function Hero() {
           animate="visible"
           className="max-w-2xl border-l border-[#C5A059]/70 pl-4 sm:pl-6"
         >
-          {/* Desktop keeps plate logo; mobile relies on fixed header brand to free vertical space */}
-          <motion.div variants={fadeUp} className="hidden sm:block">
-            <BrandLogo height={44} plate className="shadow-lg shadow-black/30" />
-          </motion.div>
-
           <motion.h1
             variants={fadeUp}
-            className="font-[family-name:var(--font-display)] text-[1.625rem] font-bold leading-[1.12] tracking-tight text-white sm:mt-8 sm:text-5xl sm:leading-[1.08] lg:text-6xl"
+            className="font-[family-name:var(--font-display)] text-[1.625rem] font-bold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-6xl"
           >
             Chuyển đổi số doanh nghiệp
             <span className="mt-1 block text-white/90">với AI &amp; Automation</span>
