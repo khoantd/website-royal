@@ -27,8 +27,8 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-[900px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-xl ${s.gradient} ${s.iconGlow}`}>
-        <s.icon className="h-8 w-8" />
+      <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0A1931] shadow-xl shadow-[#C5A059]/25">
+        <s.icon className="h-8 w-8 text-[#D4AF37]" aria-hidden />
       </div>
       <h1 className="font-[family-name:var(--font-display)] mt-8 text-4xl font-bold text-zinc-900">{s.title}</h1>
       <p className="mt-6 text-lg leading-relaxed text-zinc-600">{s.description}</p>
@@ -41,7 +41,10 @@ export default async function ServiceDetailPage({ params }: Props) {
         ))}
       </ul>
       <div className="mt-12 flex flex-wrap gap-4">
-        <Button asChild className="rounded-xl bg-gradient-to-r from-[#161E54] to-[#F16D34]">
+        <Button
+          asChild
+          className="cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
+        >
           <Link href="/contact">Nhận tư vấn</Link>
         </Button>
         <Button asChild variant="outline" className="rounded-xl border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-50">

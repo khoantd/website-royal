@@ -21,6 +21,7 @@ import {
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
+import { BrandLogoMark } from "@/components/brand-logo"
 import {
   Sidebar,
   SidebarContent,
@@ -176,9 +177,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <img src="https://shadcnuikit.com/logo.png" className="size-6 rounded-sm group-data-[collapsible=icon]:size-5" alt="shadcn ui kit svg logo" />
-                <span className="text-base font-medium">CMS</span>
+              <a href="/">
+                <BrandLogoMark />
+                <span className="text-base font-medium">Royal Solution</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

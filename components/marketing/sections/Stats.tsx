@@ -1,37 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
 import { STATS } from "@/lib/data/marketing-misc";
 import { AnimatedCounter } from "@/components/marketing/common/AnimatedCounter";
 
 export function Stats() {
-  return (
-    <section className="relative overflow-hidden py-24 lg:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(22,30,84,0.05),transparent)]" />
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(24,24,27,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(24,24,27,0.08) 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
-        }}
-      />
+  const reduceMotion = useReducedMotion();
 
+  return (
+    <section className="border-y border-zinc-200/80 bg-white py-20 lg:py-24">
       <motion.div
-        initial="hidden"
+        initial={reduceMotion ? false : "hidden"}
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="relative mx-auto grid max-w-[1280px] gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8"
+        className="mx-auto grid max-w-[1280px] gap-12 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-8 lg:px-8"
       >
         {STATS.map((s) => (
-          <div key={s.label} className="text-center">
-            <div className="font-[family-name:var(--font-display)] text-4xl font-bold md:text-5xl">
-              <span className="bg-gradient-to-r from-[#F16D34] to-[#FF986A] bg-clip-text text-transparent">
-                <AnimatedCounter value={s.value} suffix={s.suffix} duration={2} />
-              </span>
+          <div key={s.label} className="text-center lg:text-left">
+            <div className="font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">
+              <AnimatedCounter value={s.value} suffix={s.suffix} duration={reduceMotion ? 0 : 2} />
             </div>
-            <p className="mt-3 text-sm text-zinc-600">{s.label}</p>
+            <p className="mt-3 text-sm text-zinc-500">{s.label}</p>
           </div>
         ))}
       </motion.div>

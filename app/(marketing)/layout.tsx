@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Royal Tech — Chuyển đổi số, Website, CRM, ERP & AI",
-    template: "%s | Royal Tech",
+    default: "Royal Solution — Chuyển đổi số, Website, CRM, ERP & AI",
+    template: "%s | Royal Solution",
   },
   description:
     "Công ty công nghệ: thiết kế website & CMS, CRM, ERP, chatbot AI và tư vấn chuyển đổi số cho doanh nghiệp Việt Nam.",
@@ -25,8 +25,8 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Royal Tech",
-            url: "https://royaltech.vn",
+            name: "Royal Solution",
+            url: "https://royalsolution.vn",
             description: "Giải pháp website, CRM, ERP, AI & chatbot cho doanh nghiệp",
             address: { "@type": "PostalAddress", addressLocality: "Hà Nội", addressCountry: "VN" },
           }),

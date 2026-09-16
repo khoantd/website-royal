@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X, LayoutDashboard } from "lucide-react";
 import { getStoredToken } from "@/api/axiosClient";
+import { BrandLogo } from "@/components/brand-logo";
 
 const navLinks = [
   { href: "/#services", label: "Dịch vụ" },
@@ -53,10 +54,10 @@ export function LandingNav() {
         <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="flex items-center gap-2 font-heading text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-foreground/90 sm:text-xl"
+            className="flex items-center"
+            aria-label="Royal Solution — trang chủ"
           >
-            <span className="text-cta">Royal</span>
-            <span>Tech</span>
+            <BrandLogo height={32} />
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">

@@ -1,45 +1,54 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { fadeUp } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 
 export function CTABanner() {
-  return (
-    <section className="pb-24 lg:pb-32">
-      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="relative overflow-hidden rounded-3xl border border-brand-sky bg-gradient-to-br from-brand-sky/30 via-white to-brand-sky/25 px-8 py-14 text-center shadow-sm md:px-16"
-        >
-          <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-[#161E54]/30 blur-3xl" />
-          <div className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-[#FF986A]/20 blur-3xl" />
+  const reduceMotion = useReducedMotion();
 
-          <h2 className="relative font-[family-name:var(--font-display)] text-3xl font-bold text-zinc-900 md:text-4xl">
-            Sẵn sàng chuyển đổi số doanh nghiệp của bạn?
-          </h2>
-          <p className="relative mx-auto mt-4 max-w-2xl text-zinc-600">
-            Nhận tư vấn miễn phí từ đội ngũ chuyên gia — không cam kết, không phí ẩn.
-          </p>
-          <div className="relative mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <div className="rounded-xl bg-gradient-to-r from-[#161E54] to-[#FF986A] p-[1px] shadow-md shadow-brand-orange/20">
-              <Button asChild size="lg" className="rounded-[11px] border-0 bg-white px-8 text-zinc-900 hover:bg-zinc-50">
-                <Link href="/contact" className="inline-flex items-center gap-2">
-                  Đặt lịch tư vấn miễn phí <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <Button asChild variant="outline" size="lg" className="rounded-xl border-zinc-300 bg-white/80 text-zinc-900 hover:bg-white">
-              <Link href="/portfolio">Xem portfolio</Link>
-            </Button>
-          </div>
-        </motion.div>
-      </div>
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0A1931] via-[#132A52] to-[#0A1931] py-20 lg:py-28">
+      <div className="pointer-events-none absolute -right-16 top-0 h-72 w-72 rounded-full bg-[#1A3C8E]/45 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-[#C5A059]/20 blur-3xl" />
+      <div className="pointer-events-none absolute right-1/4 bottom-[-40px] h-48 w-48 rounded-full bg-[#132A52]/80 blur-2xl" />
+
+      <motion.div
+        initial={reduceMotion ? false : "hidden"}
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        className="relative mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8"
+      >
+        <div className="mx-auto mb-6 h-px w-16 bg-[#C5A059]" aria-hidden />
+        <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+          Sẵn sàng chuyển đổi số doanh nghiệp của bạn?
+        </h2>
+        <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">
+          Nhận tư vấn miễn phí từ đội ngũ chuyên gia — không cam kết, không phí ẩn.
+        </p>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button
+            asChild
+            size="lg"
+            className="h-12 min-h-11 cursor-pointer rounded-xl bg-cta px-8 text-base font-semibold text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931]"
+          >
+            <Link href="/contact" className="inline-flex items-center gap-2">
+              Đặt lịch tư vấn miễn phí <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-12 min-h-11 cursor-pointer rounded-xl border-[#C5A059]/55 bg-transparent px-8 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931]"
+          >
+            <Link href="/portfolio">Xem portfolio</Link>
+          </Button>
+        </div>
+      </motion.div>
     </section>
   );
 }

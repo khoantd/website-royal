@@ -85,7 +85,7 @@ export default function Sidebar() {
             <CardContent className="space-y-2">
               <Button
                 size="sm"
-                className="w-full items-center bg-gradient-to-r from-[#161E54] via-[#F16D34] to-[#FF986A] hover:opacity-90"
+                className="w-full items-center bg-gradient-to-r from-[#0A1931] via-[#C5A059] to-[#D4AF37] hover:opacity-90"
                 asChild>
                 <Link href="https://shadcnuikit.com/pricing" target="_blank">
                   <LockIcon className="me-2 h-4 w-4" /> Get Pro

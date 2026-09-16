@@ -44,15 +44,15 @@ export function LandingFooter() {
               </a>
             </p>
             <p className="mt-2 text-sm">
-              <a href="mailto:hello@royaltech.vn" className="cursor-pointer transition-colors hover:text-white">
-                hello@royaltech.vn
+              <a href="mailto:hello@royalsolution.vn" className="cursor-pointer transition-colors hover:text-white">
+                hello@royalsolution.vn
               </a>
             </p>
             <p className="mt-3 text-xs text-slate-500">TP. Hồ Chí Minh, Việt Nam</p>
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} Royal Tech. Bảo lưu mọi quyền.
+          &copy; {new Date().getFullYear()} Royal Solution. Bảo lưu mọi quyền.
         </div>
       </div>
     </footer>

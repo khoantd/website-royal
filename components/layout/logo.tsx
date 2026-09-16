@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Badge } from "../ui/badge";
+import { BrandLogo } from "@/components/brand-logo";
 
 type LogoProps = {
   className?: string;
@@ -8,9 +8,8 @@ type LogoProps = {
 
 export default function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn("flex items-center gap-2 px-5 py-4 font-bold", className)}>
-      <img src="/logo.png" className="block h-5 w-5" alt="shadcn ui kit logo" />
-      Shadcn UI Kit <Badge variant="outline">Free</Badge>
+    <Link href="/" className={cn("flex items-center px-5 py-4", className)} aria-label="Royal Solution — trang chủ">
+      <BrandLogo height={32} />
     </Link>
   );
 }

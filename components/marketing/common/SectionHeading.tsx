@@ -23,7 +23,12 @@ export function SectionHeading({ eyebrow, title, highlight, subtitle, align = "c
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-[family-name:var(--font-display)] mt-3 text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
+      <h2
+        className={cn(
+          "font-[family-name:var(--font-display)] mt-3 font-bold tracking-tight text-zinc-900",
+          align === "left" ? "text-3xl sm:text-4xl md:text-5xl" : "text-3xl md:text-4xl"
+        )}
+      >
         {title}
         {highlight ? (
           <>

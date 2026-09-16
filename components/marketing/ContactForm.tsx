@@ -146,7 +146,11 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" size="lg" className="w-full rounded-xl bg-gradient-to-r from-[#161E54] to-[#F16D34] text-white hover:opacity-95">
+        <Button
+          type="submit"
+          size="lg"
+          className="w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
+        >
           Gửi yêu cầu
         </Button>
       </form>

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     // Bust browser favicon cache by changing the URL
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/images/logo-royal.png",
+    apple: "/images/apple-touch-icon.png",
   },
 };
 

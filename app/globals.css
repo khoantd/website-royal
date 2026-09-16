@@ -10,12 +10,15 @@
   --font-heading: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
   --color-cta: #d4af37;
-  --color-cta-foreground: #171717;
-  /* RoyalTech marketing — bảng màu hài hoà */
-  --color-brand-sky: #bbe0ef;
-  --color-brand-navy: #161e54;
-  --color-brand-orange: #f16d34;
-  --color-brand-peach: #ff986a;
+  --color-cta-foreground: #0a1931;
+  /* Royal Solution — midnight navy + gold (brand board) */
+  --color-brand-sky: #e8eef5;
+  --color-brand-navy: #0a1931;
+  --color-brand-orange: #c5a059;
+  --color-brand-peach: #d4af37;
+  --color-brand-gold: #c5a059;
+  --color-brand-royal: #1a3c8e;
+  --color-brand-mist: #e8eef5;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -122,14 +125,14 @@
 }
 
 @layer utilities {
-  /* Nền marketing: xám-xanh rất nhạt + ánh sky/peach/navy rất nhẹ */
+  /* Nền marketing: mist + soft navy + faint gold */
   .marketing-canvas {
     min-height: 100vh;
-    background-color: #fbfcff;
+    background-color: #fafbfd;
     background-image:
-      radial-gradient(ellipse 130% 75% at 50% -18%, rgb(187 224 239 / 0.34), transparent 52%),
-      radial-gradient(ellipse 90% 55% at 100% 8%, rgb(255 152 106 / 0.03), transparent 48%),
-      radial-gradient(ellipse 85% 50% at 0% 100%, rgb(22 30 84 / 0.03), transparent 48%);
+      radial-gradient(ellipse 130% 75% at 50% -18%, rgb(232 238 245 / 0.9), transparent 52%),
+      radial-gradient(ellipse 90% 55% at 100% 8%, rgb(197 160 89 / 0.06), transparent 48%),
+      radial-gradient(ellipse 85% 50% at 0% 100%, rgb(10 25 49 / 0.04), transparent 48%);
   }
 }
 

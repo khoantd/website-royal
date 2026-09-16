@@ -77,24 +77,10 @@ export function Process() {
     : { type: "spring" as const, stiffness: 380, damping: 34 };
 
   return (
-    <section className="relative overflow-hidden border-y border-zinc-200 py-24 lg:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-50 via-white to-zinc-50/90" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_70%_at_0%_30%,rgba(22,30,84,0.09),transparent_50%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_100%_70%,rgba(187,224,239,0.35),transparent_50%)]" />
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(22,30,84,0.04) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(22,30,84,0.04) 1px, transparent 1px)
-          `,
-          backgroundSize: "64px 64px",
-          maskImage: "radial-gradient(ellipse 80% 65% at 50% 40%, black, transparent)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          align="left"
           eyebrow="Quy trình"
           title="Quy trình làm việc"
           highlight="chuyên nghiệp"
@@ -162,7 +148,7 @@ export function Process() {
                   {selected ? (
                     <motion.span
                       layoutId={`${baseId}-process-pill`}
-                      className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-[#161E54]/[0.07] to-[#F16D34]/[0.05]"
+                      className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-[#0A1931]/[0.07] to-[#C5A059]/[0.05]"
                       transition={{ type: "spring", stiffness: 400, damping: 35 }}
                     />
                   ) : null}
@@ -170,7 +156,7 @@ export function Process() {
                     className={cn(
                       "flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white shadow-md",
                       selected
-                        ? "bg-gradient-to-br from-[#161E54] to-[#F16D34]"
+                        ? "bg-gradient-to-br from-[#0A1931] to-[#C5A059]"
                         : "bg-gradient-to-br from-zinc-400 to-zinc-500"
                     )}
                   >
@@ -253,7 +239,7 @@ export function Process() {
                 {PROCESS_STEPS.map((s, i) => (
                   <div key={s.step} className="h-full flex-1 overflow-hidden rounded-full bg-zinc-200/80">
                     <motion.div
-                      className="h-full rounded-full bg-gradient-to-r from-[#161E54] to-[#FF986A]"
+                      className="h-full rounded-full bg-gradient-to-r from-[#0A1931] to-[#D4AF37]"
                       initial={false}
                       animate={{ scaleX: i <= active ? 1 : 0.12, opacity: i === active ? 1 : i < active ? 0.85 : 0.35 }}
                       transition={{ duration: reduceMotion ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}

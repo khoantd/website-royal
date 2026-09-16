@@ -31,7 +31,7 @@ export default async function BlogPostPage({ params }: Props) {
       <p className="mt-6 text-lg text-zinc-600">{post.excerpt}</p>
       <div className="prose prose-zinc mt-12 max-w-none prose-p:leading-relaxed">
         <p>
-          (Nội dung demo.) Bài viết đầy đủ có thể kết nối CMS hoặc MDX sau. Royal Tech đồng hành triển khai headless CMS và SEO cho blog doanh
+          (Nội dung demo.) Bài viết đầy đủ có thể kết nối CMS hoặc MDX sau. Royal Solution đồng hành triển khai headless CMS và SEO cho blog doanh
           nghiệp.
         </p>
         <p className="mt-6">

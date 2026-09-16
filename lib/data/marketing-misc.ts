@@ -65,63 +65,6 @@ export const STATS = [
   { value: 50, suffix: "k+", label: "Users chatbot / tháng" },
 ] as const;
 
-export type Testimonial = {
-  id: string;
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  industry: string;
-};
-
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: "1",
-    quote:
-      "CRM tùy chỉnh giúp đội sales của chúng tôi theo dõi deal rõ ràng — báo cáo cuối tuần giờ chỉ mất vài phút.",
-    name: "Minh Anh",
-    role: "Giám đốc kinh doanh",
-    company: "Công ty BĐS Phố Đông",
-    industry: "Bất động sản",
-  },
-  {
-    id: "2",
-    quote:
-      "Website mới và CMS headless giúp team marketing publish nội dung nhanh gấp đôi, SEO cải thiện rõ.",
-    name: "Thu Hà",
-    role: "Marketing Lead",
-    company: "F&B Urban Taste",
-    industry: "F&B",
-  },
-  {
-    id: "3",
-    quote:
-      "ERP kế toán — kho giảm sai lệch hàng tháng; dashboard ban lãnh đạo nhìn một nơi.",
-    name: "Quốc Tuấn",
-    role: "COO",
-    company: "Nhựa Phương Nam",
-    industry: "Sản xuất",
-  },
-  {
-    id: "4",
-    quote:
-      "Chatbot AI giảm tải call center ~40% trong quý đầu, vẫn giữ được độ chính xác nhờ RAG.",
-    name: "Lan Chi",
-    role: "Head of CX",
-    company: "PayNeo",
-    industry: "Fintech",
-  },
-  {
-    id: "5",
-    quote:
-      "Đội triển khai am hiểu SME Việt Nam — không impose quy trình nước ngoài khó áp dụng.",
-    name: "Đức Thịnh",
-    role: "CEO",
-    company: "Retail Chain North",
-    industry: "Bán lẻ",
-  },
-];
-
 export type BlogPost = {
   slug: string;
   title: string;
@@ -172,15 +115,3 @@ export const LOGO_NAMES = [
   "UrbanBrew",
   "TechNorth",
 ];
-
-export const LEADERSHIP_TEAM = [
-  {
-    role: "CEO",
-    roleVi: "Giám đốc điều hành",
-    name: "Nguyễn văn A",
-    initials: "NA",
-    bio: "Định hướng chiến lược sản phẩm và hợp tác khách hàng doanh nghiệp; hơn 12 năm kinh nghiệm triển khai chuyển đổi số và quản lý dự án công nghệ.",
-    accent: "from-[#161E54] to-[#F16D34]",
-  },
-  
-] as const;

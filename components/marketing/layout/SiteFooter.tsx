@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { BrandLogo } from "@/components/brand-logo";
 import { Facebook, Github, Linkedin, Youtube } from "lucide-react";
 
 const social = [
@@ -18,9 +19,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-[family-name:var(--font-display)] text-xl font-bold text-zinc-900">
-              Royal<span className="text-zinc-500">Tech</span>
-            </p>
+            <Link href="/" className="inline-flex" aria-label="Royal Solution — trang chủ">
+              <BrandLogo height={40} />
+            </Link>
             <p className="mt-3 text-sm leading-relaxed text-zinc-600">Đối tác công nghệ đáng tin cậy cho chuyển đổi số.</p>
             <div className="mt-6 flex gap-3">
               {social.map((s) => (
@@ -84,17 +85,6 @@ export function SiteFooter() {
                   Portfolio
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="hover:text-zinc-900">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <span className="cursor-not-allowed opacity-60">Tuyển dụng</span>
-              </li>
-              <li>
-                <span className="cursor-not-allowed opacity-60">Chính sách bảo mật</span>
-              </li>
             </ul>
           </div>
 
@@ -110,8 +100,8 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@royaltech.vn" className="hover:text-zinc-900">
-                  ✉️ hello@royaltech.vn
+                <a href="mailto:hello@royalsolution.vn" className="hover:text-zinc-900">
+                  ✉️ hello@royalsolution.vn
                 </a>
               </li>
             </ul>
@@ -121,7 +111,11 @@ export function SiteFooter() {
                 placeholder="Email nhận tin"
                 className="border-zinc-200 bg-white text-zinc-900 placeholder:text-zinc-400"
               />
-              <Button type="submit" variant="secondary" className="w-full bg-brand-navy text-white hover:bg-brand-orange">
+              <Button
+                type="submit"
+                variant="secondary"
+                className="w-full cursor-pointer bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
+              >
                 Đăng ký
               </Button>
             </form>
@@ -129,7 +123,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 text-sm text-zinc-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} Royal Tech. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Royal Solution. All rights reserved.</p>
           <div className="flex gap-4">
             <button type="button" className="text-zinc-600 hover:text-zinc-900">
               VI
