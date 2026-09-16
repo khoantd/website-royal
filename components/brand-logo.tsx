@@ -28,7 +28,7 @@ export function BrandLogo({ className, height = 40, plate = true }: BrandLogoPro
         alt="Royal Solution"
         width={width}
         height={height}
-        className="block h-auto w-auto"
+        className="block h-auto max-w-full w-auto"
         style={{ height }}
         loading="eager"
         decoding="async"

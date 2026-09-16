@@ -10,9 +10,9 @@ export function PortfolioPreview() {
   const projects = PORTFOLIO_PROJECTS.slice(0, 6);
 
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section className="bg-white py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="flex flex-col items-start justify-between gap-4 sm:gap-6 md:flex-row md:items-end">
           <SectionHeading
             align="left"
             eyebrow="Portfolio"

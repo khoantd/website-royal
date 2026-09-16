@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { BrandLogo } from "@/components/brand-logo";
 import { cn } from "@/lib/utils";
 import { SERVICE_OFFERINGS } from "@/lib/data/marketing-services";
@@ -56,6 +56,7 @@ function NavLink({
 export function SiteHeader() {
   const pathname = usePathname() ?? "";
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -63,6 +64,10 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
 
   return (
     <header
@@ -73,9 +78,14 @@ export function SiteHeader() {
           : "bg-[#0A1931]/85 supports-[backdrop-filter]:bg-[#0A1931]/75"
       )}
     >
-      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="Royal Solution — trang chủ">
-          <BrandLogo height={36} plate={false} />
+      <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className="flex min-w-0 shrink items-center"
+          aria-label="Royal Solution — trang chủ"
+        >
+          <BrandLogo height={32} plate={false} className="sm:hidden" />
+          <BrandLogo height={36} plate={false} className="hidden sm:inline-flex" />
         </Link>
 
         <nav className="hidden items-center gap-2 lg:flex">
@@ -92,14 +102,14 @@ export function SiteHeader() {
                         <Link
                           href={`/services/${s.slug}`}
                           className={cn(
-                            "flex flex-row gap-3 rounded-lg border border-transparent p-3 text-left transition-colors hover:border-[#C5A059]/40 hover:bg-[#E8EEF5]/50",
+                            "flex min-w-0 flex-row gap-3 rounded-lg border border-transparent p-3 text-left transition-colors hover:border-[#C5A059]/40 hover:bg-[#E8EEF5]/50",
                             pathname === `/services/${s.slug}` && "border-[#C5A059]/40 bg-[#E8EEF5]/60"
                           )}
                         >
                           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0A1931] shadow-lg shadow-[#C5A059]/25">
                             <s.icon className="h-5 w-5 text-[#D4AF37]" aria-hidden />
                           </div>
-                          <div>
+                          <div className="min-w-0">
                             <div className="font-semibold text-zinc-900">{s.shortTitle}</div>
                             <p className="mt-0.5 line-clamp-2 text-xs leading-snug text-zinc-500">{s.description}</p>
                           </div>
@@ -136,28 +146,37 @@ export function SiteHeader() {
           </Button>
         </div>
 
-        <Sheet>
+        <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
           <SheetTrigger asChild className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/10 hover:text-white"
+              className="size-11 shrink-0 text-white hover:bg-white/10 hover:text-white"
               aria-label="Mở menu"
             >
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[min(100vw,380px)] border-zinc-200 bg-white p-0">
-            <div className="flex flex-col gap-6 p-6">
-              <Link href="/services" className="text-base font-semibold text-zinc-900">
+          <SheetContent
+            side="right"
+            className="flex w-[min(100vw,380px)] flex-col overflow-y-auto border-zinc-200 bg-white p-0"
+          >
+            <SheetTitle className="sr-only">Menu điều hướng</SheetTitle>
+            <nav className="flex flex-1 flex-col gap-1 p-6 pt-14" aria-label="Mobile">
+              <Link
+                href="/services"
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-3 py-3 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-50"
+              >
                 Dịch vụ
               </Link>
-              <div className="flex flex-col gap-3 border-l border-zinc-200 pl-4">
+              <div className="mb-2 flex flex-col border-l border-zinc-200 py-1 pl-3">
                 {SERVICE_OFFERINGS.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="text-[0.9375rem] text-zinc-600 hover:text-zinc-900"
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-md px-3 py-2.5 text-[0.9375rem] text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
                   >
                     {s.title}
                   </Link>
@@ -167,18 +186,21 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-[0.9375rem] font-medium text-zinc-600 hover:text-zinc-900"
+                  onClick={() => setMobileOpen(false)}
+                  className="rounded-lg px-3 py-3 text-[0.9375rem] font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
                 >
                   {item.label}
                 </Link>
               ))}
               <Button
                 asChild
-                className="w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
+                className="mt-4 h-12 w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
               >
-                <Link href="/contact">Nhận Tư Vấn Miễn Phí</Link>
+                <Link href="/contact" onClick={() => setMobileOpen(false)}>
+                  Nhận Tư Vấn Miễn Phí
+                </Link>
               </Button>
-            </div>
+            </nav>
           </SheetContent>
         </Sheet>
       </div>

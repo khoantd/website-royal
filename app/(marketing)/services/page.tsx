@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold text-zinc-900">Dịch vụ</h1>
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-zinc-900 sm:text-4xl">Dịch vụ</h1>
       <p className="mt-4 max-w-2xl text-zinc-600">Chọn giải pháp phù hợp giai đoạn — có thể kết hợp nhiều module.</p>
-      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:mt-12 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
         {SERVICE_OFFERINGS.map((s) => (
           <Link
             key={s.slug}
             href={`/services/${s.slug}`}
-            className="group rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm transition-all hover:border-brand-sky hover:shadow-md"
+            className="group rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition-all hover:border-brand-sky hover:shadow-md sm:p-8"
           >
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#0A1931] shadow-[#C5A059]/25 shadow-lg">
               <s.icon className="h-6 w-6 text-[#D4AF37]" aria-hidden />

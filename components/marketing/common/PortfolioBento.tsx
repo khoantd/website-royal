@@ -89,14 +89,14 @@ export function PortfolioBento({ projects, href = "/portfolio", className }: Por
               className="pointer-events-none absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/70 via-black/35 to-transparent"
               aria-hidden
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] p-4 sm:p-5">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] p-3 sm:p-5">
               <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] text-white/75">
                 {p.tags.join(" · ")}
               </p>
               <h3
                 className={cn(
-                  "font-[family-name:var(--font-display)] mt-1.5 font-semibold text-white drop-shadow-sm",
-                  featured ? "text-xl sm:text-2xl lg:text-3xl" : fullBleed ? "text-lg sm:text-xl" : "text-base sm:text-lg"
+                  "font-[family-name:var(--font-display)] mt-1.5 break-words font-semibold text-white drop-shadow-sm",
+                  featured ? "text-lg sm:text-2xl lg:text-3xl" : fullBleed ? "text-base sm:text-xl" : "text-base sm:text-lg"
                 )}
               >
                 {p.title}

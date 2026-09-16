@@ -33,12 +33,12 @@ const PRODUCT_LAYERS = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
       <header className="max-w-3xl">
         <p className="font-[family-name:var(--font-mono)] text-xs font-medium uppercase tracking-[0.2em] text-brand-navy">
           Về chúng tôi
         </p>
-        <h1 className="font-[family-name:var(--font-display)] mt-3 text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">
+        <h1 className="font-[family-name:var(--font-display)] mt-3 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl">
           Royal Solution
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-zinc-600 md:text-xl">

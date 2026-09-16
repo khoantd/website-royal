@@ -1,32 +1,30 @@
 "use client";
 
+import { useState, useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { submitContactForm } from "@/app/actions/contact";
+import {
+  contactFormSchema,
+  type ContactFormValues,
+} from "@/lib/contact-schema";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-
-const schema = z.object({
-  name: z.string().min(2, "Nhập họ tên"),
-  email: z.string().email("Email không hợp lệ"),
-  phone: z.string().optional(),
-  service: z.enum(["website", "crm", "erp", "ai", "dashboard", "ml", "other"]),
-  companySize: z.enum(["lt10", "10-50", "50-200", "200p"]),
-  message: z.string().min(10, "Mô tả ít nhất 10 ký tự"),
-});
-
-type FormValues = z.infer<typeof schema>;
+import { cn } from "@/lib/utils";
 
 const inputClass =
   "border-zinc-200 bg-white text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-brand-orange";
 
 export function ContactForm() {
-  const form = useForm<FormValues>({
-    resolver: zodResolver(schema),
+  const [isPending, startTransition] = useTransition();
+  const [submitted, setSubmitted] = useState(false);
+
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -37,9 +35,17 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(_data: FormValues) {
-    toast.success("Đã ghi nhận — đội ngũ sẽ phản hồi trong 2 giờ làm việc.");
-    form.reset();
+  function onSubmit(data: ContactFormValues) {
+    startTransition(async () => {
+      const result = await submitContactForm(data);
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      setSubmitted(true);
+      toast.success("Đã ghi nhận — đội ngũ sẽ phản hồi trong 2 giờ làm việc.");
+      form.reset();
+    });
   }
 
   return (
@@ -52,7 +58,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-zinc-700">Họ tên *</FormLabel>
               <FormControl>
-                <Input className={inputClass} {...field} />
+                <Input className={inputClass} autoComplete="name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,7 +71,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-zinc-700">Email *</FormLabel>
               <FormControl>
-                <Input type="email" className={inputClass} {...field} />
+                <Input type="email" className={inputClass} autoComplete="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -78,7 +84,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-zinc-700">Số điện thoại</FormLabel>
               <FormControl>
-                <Input className={inputClass} {...field} />
+                <Input className={inputClass} autoComplete="tel" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -92,7 +98,7 @@ export function ContactForm() {
               <FormLabel className="text-zinc-700">Dịch vụ quan tâm</FormLabel>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                  <SelectTrigger className={inputClass}>
+                  <SelectTrigger className={cn(inputClass, "w-full")}>
                     <SelectValue placeholder="Chọn" />
                   </SelectTrigger>
                 </FormControl>
@@ -118,7 +124,7 @@ export function ContactForm() {
               <FormLabel className="text-zinc-700">Quy mô công ty</FormLabel>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                  <SelectTrigger className={inputClass}>
+                  <SelectTrigger className={cn(inputClass, "w-full")}>
                     <SelectValue placeholder="Chọn" />
                   </SelectTrigger>
                 </FormControl>
@@ -149,9 +155,11 @@ export function ContactForm() {
         <Button
           type="submit"
           size="lg"
-          className="w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
+          disabled={isPending}
+          aria-busy={isPending}
+          className="w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Gửi yêu cầu
+          {isPending ? "Đang gửi…" : submitted ? "Gửi thêm yêu cầu" : "Gửi yêu cầu"}
         </Button>
       </form>
     </Form>

@@ -26,11 +26,11 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!s) notFound();
 
   return (
-    <article className="mx-auto max-w-[900px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0A1931] shadow-xl shadow-[#C5A059]/25">
-        <s.icon className="h-8 w-8 text-[#D4AF37]" aria-hidden />
+    <article className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A1931] shadow-xl shadow-[#C5A059]/25 sm:h-16 sm:w-16">
+        <s.icon className="h-7 w-7 text-[#D4AF37] sm:h-8 sm:w-8" aria-hidden />
       </div>
-      <h1 className="font-[family-name:var(--font-display)] mt-8 text-4xl font-bold text-zinc-900">{s.title}</h1>
+      <h1 className="font-[family-name:var(--font-display)] mt-6 text-3xl font-bold text-zinc-900 sm:mt-8 sm:text-4xl">{s.title}</h1>
       <p className="mt-6 text-lg leading-relaxed text-zinc-600">{s.description}</p>
       <h2 className="font-[family-name:var(--font-display)] mt-12 text-xl font-semibold text-zinc-900">Điểm nổi bật</h2>
       <ul className="mt-4 space-y-3 text-zinc-700">

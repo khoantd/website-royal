@@ -38,7 +38,7 @@ export function Pricing() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section className="bg-white py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           align="left"
@@ -53,12 +53,16 @@ export function Pricing() {
           initial={reduceMotion ? false : "hidden"}
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-14 grid gap-6 lg:grid-cols-3 lg:gap-8"
+          className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
         >
           {PLANS.map((plan) => (
-            <motion.div key={plan.name} variants={fadeUp}>
+            <motion.div
+              key={plan.name}
+              variants={fadeUp}
+              className={plan.popular ? "md:col-span-2 lg:col-span-1" : undefined}
+            >
               <div
-                className={`relative flex h-full flex-col border p-8 ${
+                className={`relative flex h-full flex-col border p-6 sm:p-8 ${
                   plan.popular ? "border-[#0A1931] bg-[#F7F9FC]" : "border-zinc-200 bg-white"
                 }`}
               >

@@ -16,8 +16,8 @@ const social = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-zinc-200 bg-white">
-      <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="inline-flex" aria-label="Royal Solution — trang chủ">
               <BrandLogo height={40} />

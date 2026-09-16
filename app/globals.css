@@ -128,6 +128,8 @@
   /* Nền marketing: mist + soft navy + faint gold */
   .marketing-canvas {
     min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: clip;
     background-color: #fafbfd;
     background-image:
       radial-gradient(ellipse 130% 75% at 50% -18%, rgb(232 238 245 / 0.9), transparent 52%),

@@ -11,7 +11,7 @@ export function BlogPreview() {
   const [featured, ...rest] = BLOG_POSTS;
 
   return (
-    <section className="border-t border-zinc-200/80 bg-white py-24 lg:py-32">
+    <section className="border-t border-zinc-200/80 bg-white py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           align="left"
@@ -26,11 +26,11 @@ export function BlogPreview() {
           initial={reduceMotion ? false : "hidden"}
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-14 grid gap-10 lg:grid-cols-2"
+          className="mt-10 grid gap-8 sm:mt-14 sm:gap-10 lg:grid-cols-2"
         >
-          <motion.article variants={fadeUp} className="group">
+          <motion.article variants={fadeUp} className="group min-w-0">
             <p className="font-[family-name:var(--font-mono)] text-xs text-zinc-400">{featured.date}</p>
-            <h3 className="font-[family-name:var(--font-display)] mt-3 text-2xl font-bold text-zinc-900 transition-colors duration-200 group-hover:text-brand-navy sm:text-3xl">
+            <h3 className="font-[family-name:var(--font-display)] mt-3 text-xl font-bold text-zinc-900 transition-colors duration-200 group-hover:text-brand-navy sm:text-3xl">
               <Link href={`/blog/${featured.slug}`} className="cursor-pointer">
                 {featured.title}
               </Link>

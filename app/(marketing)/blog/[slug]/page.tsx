@@ -25,9 +25,9 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-[720px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <article className="mx-auto max-w-[720px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
       <p className="font-[family-name:var(--font-mono)] text-xs text-zinc-500">{post.date}</p>
-      <h1 className="font-[family-name:var(--font-display)] mt-4 text-3xl font-bold leading-tight text-zinc-900 md:text-4xl">{post.title}</h1>
+      <h1 className="font-[family-name:var(--font-display)] mt-4 text-2xl font-bold leading-tight text-zinc-900 sm:text-3xl md:text-4xl">{post.title}</h1>
       <p className="mt-6 text-lg text-zinc-600">{post.excerpt}</p>
       <div className="prose prose-zinc mt-12 max-w-none prose-p:leading-relaxed">
         <p>

@@ -33,7 +33,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
         }}
       />
       <SiteHeader />
-      <main className="pt-16">{children}</main>
+      <main className="pt-14 sm:pt-16">{children}</main>
       <SiteFooter />
       <Toaster />
     </div>

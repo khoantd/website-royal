@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   return (
-    <div className="mx-auto max-w-[900px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold text-zinc-900">Blog</h1>
+    <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-zinc-900 sm:text-4xl">Blog</h1>
       <p className="mt-4 text-zinc-600">Insight và best practices — cập nhật định kỳ.</p>
       <ul className="mt-12 space-y-10">
         {BLOG_POSTS.map((post) => (

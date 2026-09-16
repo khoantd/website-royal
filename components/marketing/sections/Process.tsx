@@ -77,7 +77,7 @@ export function Process() {
     : { type: "spring" as const, stiffness: 380, damping: 34 };
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
       <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           align="left"
@@ -87,7 +87,7 @@ export function Process() {
           subtitle="Từ buổi trao đổi đầu tiên đến go-live và vận hành — mỗi giai đoạn đều có mốc rõ ràng, tài liệu và người phụ trách."
         />
 
-        <div className="mt-14 space-y-6 lg:mt-16">
+        <div className="mt-10 space-y-6 sm:mt-14 lg:mt-16">
           {/* <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-center text-xs text-zinc-500 sm:text-left">
               Phím <kbd className="rounded border border-zinc-300 bg-zinc-100 px-1.5 py-0.5 font-mono text-[10px] text-zinc-700">←</kbd>{" "}
@@ -119,7 +119,7 @@ export function Process() {
           <div
             role="tablist"
             aria-label="Các giai đoạn dự án"
-            className="relative flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:justify-center [&::-webkit-scrollbar]:hidden"
+            className="relative -mx-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:justify-center sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden"
           >
             <div
               className="pointer-events-none absolute bottom-1 left-0 hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-200 to-transparent sm:block"
@@ -182,7 +182,7 @@ export function Process() {
               <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brand-orange/15 blur-3xl" />
               <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-cyan-400/12 blur-3xl" />
 
-              <div className="relative px-6 py-8 sm:px-10 sm:py-10">
+              <div className="relative px-4 py-6 sm:px-10 sm:py-10">
                 <AnimatePresence initial={false} mode="wait">
                   <motion.div
                     key={active}
@@ -235,7 +235,7 @@ export function Process() {
                 </AnimatePresence>
               </div>
 
-              <div className="flex h-1.5 gap-1 border-t border-zinc-100/80 bg-zinc-50/50 px-6 pb-4 pt-0 sm:px-10">
+              <div className="flex h-1.5 gap-1 border-t border-zinc-100/80 bg-zinc-50/50 px-4 pb-4 pt-0 sm:px-10">
                 {PROCESS_STEPS.map((s, i) => (
                   <div key={s.step} className="h-full flex-1 overflow-hidden rounded-full bg-zinc-200/80">
                     <motion.div

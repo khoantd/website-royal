@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold text-zinc-900">Portfolio</h1>
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-zinc-900 sm:text-4xl">Portfolio</h1>
       <p className="mt-4 max-w-2xl text-zinc-600">
         Một phần dự án đã công bố — chi tiết có thể chia sẻ khi trao đổi NDA.
       </p>

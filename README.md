@@ -31,7 +31,14 @@ Tạo file `.env.local` (copy từ `.env.example`):
 
 ```bash
 NEXT_PUBLIC_API_URL=http://localhost:3000
+
+# Resend — form liên hệ gửi email
+RESEND_API_KEY=re_xxxxxxxxx
+EMAIL_FROM=Royal Solution <onboarding@resend.dev>
+CONTACT_EMAIL=hello@royalsolution.vn
 ```
+
+Form `/contact` dùng Server Action + Resend: gửi thông báo tới `CONTACT_EMAIL` (reply-to = email khách) và email xác nhận tới người gửi. Dùng `onboarding@resend.dev` khi chưa verify domain.
 
 ### Cấu trúc API
 
