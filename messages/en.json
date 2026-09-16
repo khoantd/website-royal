@@ -1,0 +1,370 @@
+{
+  "Meta": {
+    "siteTitle": "Royal Solution — Digital transformation, Website, CRM, ERP & AI",
+    "siteTitleTemplate": "{title} | Royal Solution",
+    "siteDescription": "Technology company: website & CMS design, CRM, ERP, AI chatbots, and digital transformation consulting for Vietnamese businesses.",
+    "orgDescription": "Website, CRM, ERP, AI & chatbot solutions for businesses",
+    "homeTitle": "Home",
+    "homeDescription": "Royal Solution — digital transformation partner: Website & CMS, CRM, ERP, ML/AI & omnichannel chatbots. Clear process, measurable outcomes.",
+    "aboutTitle": "About us",
+    "aboutDescription": "Vietnamese SaaS company building CRM, ERP, and AI solutions for small and mid-sized businesses.",
+    "contactTitle": "Contact",
+    "contactDescription": "Contact Royal Solution — website, CRM, ERP, and AI consulting. We reply within 2 business hours.",
+    "servicesTitle": "Services",
+    "servicesDescription": "Website & CMS, CRM, ERP, AI & Chatbot, Dashboard & reporting, ML / AI — explore each solution.",
+    "portfolioTitle": "Portfolio",
+    "portfolioDescription": "Website, CRM, ERP, and AI projects — Royal Solution case studies.",
+    "blogTitle": "Blog",
+    "blogDescription": "Insights on CRM, ERP, AI, chatbots, and digital transformation."
+  },
+  "Nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About us",
+    "contact": "Contact",
+    "viewAllServices": "View all services →",
+    "ctaConsult": "Free Consultation",
+    "openMenu": "Open menu",
+    "mobileMenu": "Navigation menu",
+    "homeAria": "Royal Solution — home"
+  },
+  "Hero": {
+    "titleLine1": "Digital transformation",
+    "titleLine2": "with AI & Automation",
+    "subtitle": "Website, CRM, ERP, and AI chatbots — clear process, measurable results, long-term partnership.",
+    "ctaDemo": "Book a demo",
+    "ctaServices": "View services"
+  },
+  "Footer": {
+    "tagline": "A trusted technology partner for digital transformation.",
+    "services": "Services",
+    "consulting": "Technology consulting",
+    "company": "Company",
+    "about": "About us",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "location": "Ho Chi Minh City, Vietnam",
+    "newsletterPlaceholder": "Email for updates",
+    "subscribe": "Subscribe",
+    "rights": "© {year} Royal Solution. All rights reserved."
+  },
+  "PortfolioPreview": {
+    "eyebrow": "Portfolio",
+    "title": "Featured",
+    "highlight": "projects",
+    "subtitle": "Selected case studies — visuals first, measurable outcomes.",
+    "viewAll": "View all"
+  },
+  "ServicesSection": {
+    "eyebrow": "Services",
+    "title": "Clear, durable digital experiences — from websites to AI.",
+    "subtitle": "One partner for digital transformation: design, build, and run solutions with measurable results.",
+    "cta": "View services",
+    "viewDetail": "View details"
+  },
+  "ServicesPage": {
+    "title": "Services",
+    "subtitle": "Pick what fits your stage — modules can be combined.",
+    "detail": "Details",
+    "highlights": "Highlights",
+    "getConsult": "Get a consultation",
+    "allServices": "All services"
+  },
+  "Process": {
+    "eyebrow": "Process",
+    "title": "How we",
+    "highlight": "work",
+    "subtitle": "From the first conversation to go-live and operations — every stage has clear milestones, docs, and an owner.",
+    "tablistAria": "Project stages",
+    "stepOf": "Step {step} / {total}",
+    "durationLabel": "Typical duration: {duration}",
+    "deliverablesHeading": "Stage deliverables",
+    "deliverablesAria": "Deliverables",
+    "steps": {
+      "1": {
+        "title": "Discover",
+        "desc": "Needs analysis & consulting (free)",
+        "duration": "1–2 weeks",
+        "tag": "Discovery",
+        "deliverables": ["Discovery workshop", "Current-state notes", "MVP priorities & scope"]
+      },
+      "2": {
+        "title": "Design",
+        "desc": "UI/UX wireframes & prototypes",
+        "duration": "2–3 weeks",
+        "tag": "Design",
+        "deliverables": ["User flows & IA", "Mid-fidelity wireframes", "Interactive prototype"]
+      },
+      "3": {
+        "title": "Build",
+        "desc": "Agile sprints, weekly updates",
+        "duration": "Scope-dependent",
+        "tag": "Build",
+        "deliverables": ["Milestone sprints", "CI/CD & staging", "Regular demos"]
+      },
+      "4": {
+        "title": "Test",
+        "desc": "QA, UAT, performance testing",
+        "duration": "1–2 weeks",
+        "tag": "Quality",
+        "deliverables": ["Test plan & bug reports", "UAT with your team", "Performance & security"]
+      },
+      "5": {
+        "title": "Launch & support",
+        "desc": "Go-live + maintenance & training",
+        "duration": "Ongoing",
+        "tag": "Launch",
+        "deliverables": ["Go-live checklist", "Handover & docs", "Maintenance / SLA package"]
+      }
+    }
+  },
+  "Stats": {
+    "items": {
+      "projects": "Projects delivered",
+      "satisfaction": "Client satisfaction",
+      "years": "Years of experience",
+      "chatbotUsers": "Chatbot users / month"
+    }
+  },
+  "Pricing": {
+    "eyebrow": "Pricing",
+    "title": "Plans for",
+    "highlight": "every scale",
+    "subtitle": "Contact us for a detailed quote based on scope.",
+    "popular": "Most popular",
+    "cta": "Get a quote",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "audience": "SME, startup",
+        "desc": "Basic website + CMS",
+        "features": ["Landing / corporate site", "Content CMS", "Hosting guidance", "Foundational SEO"],
+        "missing": ["Custom CRM", "ERP"]
+      },
+      "professional": {
+        "name": "Professional",
+        "audience": "Mid-size businesses",
+        "desc": "Website + CRM or ERP",
+        "features": ["Full website / headless", "CRM or ERP module", "API integrations", "24h response SLA"],
+        "missing": []
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "audience": "Enterprises",
+        "desc": "Full suite + AI",
+        "features": ["Multi-product rollout", "CRM + ERP + AI", "Dedicated team", "On-prem / hybrid"],
+        "missing": []
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "subtitle": "Insights and best practices — updated regularly.",
+    "readMore": "Read more →",
+    "demoBody": "(Demo content.) Full articles can connect to a CMS or MDX later. Royal Solution helps ship headless CMS and SEO for company blogs.",
+    "discussCta": "Discuss blog & SEO implementation →",
+    "back": "← Back to list"
+  },
+  "CTABanner": {
+    "title": "Ready to digitally transform your business?",
+    "subtitle": "Get a free consultation from our specialists — no commitment, no hidden fees.",
+    "ctaPrimary": "Book a free consultation",
+    "ctaSecondary": "View portfolio"
+  },
+  "TrustedBy": {
+    "eyebrow": "Trusted by",
+    "title": "Trusted by {count}+ businesses"
+  },
+  "TechStack": {
+    "eyebrow": "Stack",
+    "title": "Technology we",
+    "highlight": "use",
+    "subtitle": "We pick tools that fit the problem — not a vendor lock-in agenda."
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "subtitle": "Fill out the form — we reply within 2 business hours.",
+    "badge": "Reply within 2 hours"
+  },
+  "ContactForm": {
+    "name": "Full name *",
+    "email": "Email *",
+    "phone": "Phone",
+    "service": "Service of interest",
+    "companySize": "Company size",
+    "message": "Describe your needs *",
+    "select": "Select",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "submitAgain": "Send another request",
+    "successToast": "Received — our team will reply within 2 business hours.",
+    "services": {
+      "website": "Website / CMS",
+      "crm": "CRM",
+      "erp": "ERP",
+      "ai": "AI / Chatbot",
+      "dashboard": "Dashboard & Reporting",
+      "ml": "ML / AI",
+      "other": "Other"
+    },
+    "sizes": {
+      "lt10": "< 10 people",
+      "10-50": "10 – 50",
+      "50-200": "50 – 200",
+      "200p": "200+"
+    }
+  },
+  "PortfolioPage": {
+    "title": "Portfolio",
+    "subtitle": "A selection of published projects — more detail available under NDA.",
+    "discuss": "Discuss something similar →"
+  },
+  "About": {
+    "eyebrow": "About us",
+    "title": "Royal Solution",
+    "lead": "A Vietnamese SaaS company building CRM, ERP, and AI solutions for small and mid-sized businesses.",
+    "introTitle": "Overview",
+    "introBody": "Royal Solution is a Vietnamese software services company, founded in November 2025 by Khoa, a product and technology leader with more than 15 years of experience in banking, fintech, and AI across Vietnam and Korea. The company focuses on SMEs — the backbone of Vietnam’s economy — who have long been stuck between oversized, expensive foreign platforms and domestic tools that only cover basic accounting obligations.",
+    "missionTitle": "Mission",
+    "missionBody": "We believe Vietnamese SMEs deserve software designed for how they sell, operate, and grow — not shallow localized add-ons bolted onto foreign platforms. Royal Solution’s mission is to close that gap, bringing enterprise-grade architecture, data, and risk discipline at cost and delivery speed that fit growing SMEs.",
+    "originTitle": "Origins",
+    "originBody": "Royal Solution is the founder’s second company. Previously, Khoa founded Micro Solution in 2020 and ran it through early 2026. Five years building software for Vietnamese businesses clarified real market gaps and what makes an SME-serving model sustainable. Royal Solution applies those lessons at greater product depth and ambition.",
+    "productsTitle": "Products and solutions",
+    "productsLead": "Royal Solution’s catalog is organized into value layers a modern SME needs on the path to digital transformation and AI adoption.",
+    "layers": {
+      "crmErp": {
+        "title": "Core CRM and ERP products",
+        "body": "This is the company’s primary platform, designed for Vietnamese SME sales, operations, and growth workflows."
+      },
+      "training": {
+        "title": "AI workforce training and capability building",
+        "body": "The VABIX AI-First Workforce Training (AFET-W™) program and PromptHub SaaS help enterprises transform teams toward AI-First in a structured way — beyond one-off tool usage."
+      },
+      "clearai": {
+        "title": "AI decision support and quality control",
+        "body": "ClearAI challenges and clarifies AI model outputs so business leaders can trust AI in real work."
+      },
+      "architect": {
+        "title": "Architecture and technical operations platform",
+        "body": "RS Architect supports enterprise architecture management, with specialized solutions such as LOS scoring for lending and AI speech-to-text for industries with high conversational data volume."
+      },
+      "automation": {
+        "title": "Automation and channel integration",
+        "body": "n8n-based automation pipelines sync Zalo OA and other customer channels so SMEs connect multi-source data into one operating spine."
+      }
+    },
+    "differenceTitle": "What sets us apart",
+    "differenceBody": "What makes Royal Solution different is not feature count, but how the company is built. Our technical foundation inherits architecture and risk discipline from large-scale banking and fintech, where the founder held product and technology roles at FE Credit, VIB, Home Credit Vietnam, and Head of AI Product at AI+DI. How we deliver for customers stays practical and fast — SME-serving tempo at growth-friendly cost.",
+    "cta": "Discuss a project"
+  },
+  "Services": {
+    "website-cms": {
+      "title": "Website & CMS",
+      "shortTitle": "Website & CMS",
+      "description": "Professional website design and development, SEO-ready, with flexible CMS (WordPress, Strapi, Sanity, custom headless).",
+      "features": ["Headless CMS", "SEO-ready", "Core Web Vitals", "Fully responsive"]
+    },
+    "crm": {
+      "title": "CRM — Customer management",
+      "shortTitle": "CRM",
+      "description": "Custom CRM aligned to your sales process, pipeline automation, and 360° customer tracking.",
+      "features": ["Clear pipeline", "Email automation", "Realtime reporting", "Zalo/Email integrations"]
+    },
+    "erp": {
+      "title": "ERP — Business operations",
+      "shortTitle": "ERP",
+      "description": "Full ERP rollout: accounting, inventory, HR, purchasing — one unified platform.",
+      "features": ["Finance & accounting", "Inventory management", "HRM & attendance", "Multi-branch"]
+    },
+    "ai-chatbot": {
+      "title": "AI & Chatbot",
+      "shortTitle": "AI & Chatbot",
+      "description": "Next-gen GPT-powered chatbots, 24/7, omnichannel: web, Zalo, Messenger, Telegram.",
+      "features": ["Custom LLM", "RAG knowledge base", "Omnichannel", "Analytics & training"]
+    },
+    "reporting-dashboard": {
+      "title": "Dashboard & Reporting",
+      "shortTitle": "Dashboard",
+      "description": "KPI dashboards: multi-source data, alerts, exports — faster, clearer leadership decisions.",
+      "features": ["Data visualization", "Automated reports", "Multi-source integrations", "Flexible exports"]
+    },
+    "ml-ai": {
+      "title": "ML / AI",
+      "shortTitle": "ML / AI",
+      "description": "Build and deploy ML models on your data: forecasting, classification, anomaly detection, recommendations — with API/MLOps and performance monitoring.",
+      "features": ["Domain forecasting & classification", "MLOps & model versioning", "API / batch pipelines", "On-prem or cloud per policy"]
+    }
+  },
+  "Portfolio": {
+    "1": {
+      "title": "E-commerce Website + CMS",
+      "tags": ["Website", "CMS"],
+      "industry": "Fashion",
+      "location": "Hanoi",
+      "metric": "⬆ 180% leads in 3 months",
+      "excerpt": "Headless storefront and CMS for marketing to self-serve."
+    },
+    "2": {
+      "title": "Custom CRM for brokers",
+      "tags": ["CRM"],
+      "industry": "Real estate",
+      "location": "",
+      "metric": "700+ brokers on one platform",
+      "excerpt": "Pipeline and realtime reporting by region."
+    },
+    "3": {
+      "title": "Food manufacturing ERP",
+      "tags": ["ERP"],
+      "industry": "Manufacturing",
+      "location": "Binh Duong",
+      "metric": "−32% inventory variance",
+      "excerpt": "Integrated production planning, QC, and warehouse."
+    },
+    "4": {
+      "title": "Banking AI support chatbot",
+      "tags": ["AI"],
+      "industry": "Banking",
+      "location": "",
+      "metric": "50k+ users/month",
+      "excerpt": "RAG over internal policies, handoff to agents when needed."
+    },
+    "5": {
+      "title": "Headless CMS — media",
+      "tags": ["Website", "CMS"],
+      "industry": "Media",
+      "location": "",
+      "metric": "Publish < 5 min/article",
+      "excerpt": "Multi-site, multi-language sync."
+    },
+    "6": {
+      "title": "AI Data Analytics Dashboard",
+      "tags": ["AI"],
+      "industry": "Fintech",
+      "location": "",
+      "metric": "Report SLA < 60s",
+      "excerpt": "Data pipelines and fraud alerts."
+    }
+  },
+  "Blog": {
+    "ai-chatbot-2025": {
+      "title": "AI Chatbots in 2025: Why 80% of businesses should deploy now",
+      "excerpt": "Support costs, RAG, and rising customer expectations are shifting."
+    },
+    "erp-odoo-sap-custom": {
+      "title": "ERP comparison: Odoo vs SAP vs Custom — which fits you?",
+      "excerpt": "A decision matrix by size, industry, and customization needs."
+    },
+    "headless-cms-la-gi": {
+      "title": "What is a headless CMS? Why replace WordPress monoliths?",
+      "excerpt": "Separate content from presentation — wins for marketing and engineering."
+    },
+    "crm-sme-vietnam": {
+      "title": "CRM and customer management for Vietnamese SMEs",
+      "excerpt": "Simple pipelines that still measure — without oversized software."
+    },
+    "rag-vs-finetuning": {
+      "title": "RAG vs fine-tuning: which AI strategy for your business?",
+      "excerpt": "When to retrain a model, and when a knowledge base is enough."
+    }
+  }
+}

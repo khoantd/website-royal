@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { fadeUp } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 
 export function CTABanner() {
+  const t = useTranslations("CTABanner");
   const reduceMotion = useReducedMotion();
 
   return (
@@ -24,11 +26,9 @@ export function CTABanner() {
       >
         <div className="mx-auto mb-6 h-px w-16 bg-[#C5A059]" aria-hidden />
         <h2 className="font-[family-name:var(--font-display)] text-[1.75rem] font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
-          Sẵn sàng chuyển đổi số doanh nghiệp của bạn?
+          {t("title")}
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-5 sm:text-lg">
-          Nhận tư vấn miễn phí từ đội ngũ chuyên gia — không cam kết, không phí ẩn.
-        </p>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-5 sm:text-lg">{t("subtitle")}</p>
         <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
           <Button
             asChild
@@ -36,7 +36,7 @@ export function CTABanner() {
             className="h-12 min-h-11 w-full cursor-pointer rounded-xl bg-cta px-8 text-base font-semibold text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931] sm:w-auto"
           >
             <Link href="/contact" className="inline-flex items-center justify-center gap-2">
-              Đặt lịch tư vấn miễn phí <ArrowRight className="h-4 w-4" aria-hidden />
+              {t("ctaPrimary")} <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </Button>
           <Button
@@ -45,7 +45,7 @@ export function CTABanner() {
             size="lg"
             className="h-12 min-h-11 w-full cursor-pointer rounded-xl border-[#C5A059]/55 bg-transparent px-8 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931] sm:w-auto"
           >
-            <Link href="/portfolio">Xem portfolio</Link>
+            <Link href="/portfolio">{t("ctaSecondary")}</Link>
           </Button>
         </div>
       </motion.div>

@@ -1,15 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { SERVICE_OFFERINGS } from "@/lib/data/marketing-services";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { localizeServices } from "@/lib/i18n/marketing";
 
 export function MarketingServices() {
+  const t = useTranslations("ServicesSection");
+  const tServices = useTranslations("Services");
   const reduceMotion = useReducedMotion();
+  const offerings = localizeServices(tServices);
 
   return (
     <section className="relative">
@@ -26,14 +30,12 @@ export function MarketingServices() {
             className="max-w-3xl border-l border-[#C5A059] pl-4 sm:pl-6"
           >
             <p className="font-[family-name:var(--font-mono)] text-xs font-medium uppercase tracking-[0.25em] text-[#C5A059]">
-              Dịch vụ
+              {t("eyebrow")}
             </p>
             <h2 className="font-[family-name:var(--font-display)] mt-3 text-[1.75rem] font-bold leading-tight tracking-tight sm:mt-4 sm:text-4xl lg:text-5xl">
-              Trải nghiệm số rõ ràng, bền vững — từ website đến AI.
+              {t("title")}
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
-              Một đối tác cho chuyển đổi số: thiết kế, xây dựng và vận hành giải pháp đo được kết quả.
-            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">{t("subtitle")}</p>
           </motion.div>
           <Button
             asChild
@@ -41,7 +43,7 @@ export function MarketingServices() {
             className="h-12 min-h-11 w-full shrink-0 cursor-pointer rounded-full bg-cta px-8 font-semibold text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931] sm:w-fit"
           >
             <Link href="/services" className="inline-flex items-center justify-center gap-2">
-              Xem dịch vụ <ArrowRight className="h-4 w-4" aria-hidden />
+              {t("cta")} <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </Button>
         </div>
@@ -55,7 +57,7 @@ export function MarketingServices() {
           viewport={{ once: true, margin: "-80px" }}
           className="mx-auto flex max-w-[1280px] flex-col gap-14 sm:gap-20 lg:gap-28"
         >
-          {SERVICE_OFFERINGS.map((s, i) => {
+          {offerings.map((s, i) => {
             const imageLeft = i % 2 === 1;
             const Icon = s.icon;
 
@@ -90,7 +92,7 @@ export function MarketingServices() {
                     href={`/services/${s.slug}`}
                     className="group/link mt-8 inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-brand-navy transition-colors duration-200 hover:text-brand-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
                   >
-                    Xem chi tiết{" "}
+                    {t("viewDetail")}{" "}
                     <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1" aria-hidden />
                   </Link>
                 </div>

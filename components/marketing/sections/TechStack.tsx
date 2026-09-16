@@ -1,15 +1,23 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import { TECH_STACK } from "@/lib/data/marketing-misc";
 import { SectionHeading } from "@/components/marketing/common/SectionHeading";
 
 export function TechStack() {
+  const t = useTranslations("TechStack");
+
   return (
     <section className="border-y border-zinc-200 bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Stack" title="Công nghệ chúng tôi" highlight="sử dụng" subtitle="Chọn công cụ phù hợp bài toán — không áp đặt nhà cung cấp." />
+        <SectionHeading
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          highlight={t("highlight")}
+          subtitle={t("subtitle")}
+        />
 
         <motion.div
           variants={staggerContainer}
@@ -20,7 +28,9 @@ export function TechStack() {
         >
           {TECH_STACK.map((cat) => (
             <motion.div key={cat.category} variants={fadeUp}>
-              <h3 className="font-[family-name:var(--font-mono)] text-xs font-semibold uppercase tracking-wider text-brand-navy">{cat.category}</h3>
+              <h3 className="font-[family-name:var(--font-mono)] text-xs font-semibold uppercase tracking-wider text-brand-navy">
+                {cat.category}
+              </h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {cat.items.map((item) => (
                   <span

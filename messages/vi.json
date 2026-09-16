@@ -1,0 +1,370 @@
+{
+  "Meta": {
+    "siteTitle": "Royal Solution — Chuyển đổi số, Website, CRM, ERP & AI",
+    "siteTitleTemplate": "{title} | Royal Solution",
+    "siteDescription": "Công ty công nghệ: thiết kế website & CMS, CRM, ERP, chatbot AI và tư vấn chuyển đổi số cho doanh nghiệp Việt Nam.",
+    "orgDescription": "Giải pháp website, CRM, ERP, AI & chatbot cho doanh nghiệp",
+    "homeTitle": "Trang chủ",
+    "homeDescription": "Royal Solution — đối tác chuyển đổi số: Website & CMS, CRM, ERP, ML/AI & chatbot đa kênh. Quy trình rõ ràng, đo lường được.",
+    "aboutTitle": "Về chúng tôi",
+    "aboutDescription": "Công ty SaaS Việt Nam xây dựng CRM, ERP và giải pháp AI cho doanh nghiệp vừa và nhỏ.",
+    "contactTitle": "Liên hệ",
+    "contactDescription": "Liên hệ Royal Solution — tư vấn website, CRM, ERP và AI. Phản hồi trong 2 giờ làm việc.",
+    "servicesTitle": "Dịch vụ",
+    "servicesDescription": "Website & CMS, CRM, ERP, AI & Chatbot, Dashboard & báo cáo, ML / AI — xem chi tiết từng giải pháp.",
+    "portfolioTitle": "Portfolio",
+    "portfolioDescription": "Dự án website, CRM, ERP và AI — case study Royal Solution.",
+    "blogTitle": "Blog",
+    "blogDescription": "Kiến thức về CRM, ERP, AI, chatbot và chuyển đổi số."
+  },
+  "Nav": {
+    "services": "Dịch vụ",
+    "portfolio": "Portfolio",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "viewAllServices": "Xem tất cả dịch vụ →",
+    "ctaConsult": "Nhận Tư Vấn Miễn Phí",
+    "openMenu": "Mở menu",
+    "mobileMenu": "Menu điều hướng",
+    "homeAria": "Royal Solution — trang chủ"
+  },
+  "Hero": {
+    "titleLine1": "Chuyển đổi số doanh nghiệp",
+    "titleLine2": "với AI & Automation",
+    "subtitle": "Website, CRM, ERP và Chatbot AI — quy trình rõ ràng, đo lường được, đồng hành dài hạn.",
+    "ctaDemo": "Đặt lịch demo",
+    "ctaServices": "Xem dịch vụ"
+  },
+  "Footer": {
+    "tagline": "Đối tác công nghệ đáng tin cậy cho chuyển đổi số.",
+    "services": "Dịch vụ",
+    "consulting": "Tư vấn công nghệ",
+    "company": "Công ty",
+    "about": "Về chúng tôi",
+    "portfolio": "Portfolio",
+    "contact": "Liên hệ",
+    "location": "TP. Hồ Chí Minh, Việt Nam",
+    "newsletterPlaceholder": "Email nhận tin",
+    "subscribe": "Đăng ký",
+    "rights": "© {year} Royal Solution. All rights reserved."
+  },
+  "PortfolioPreview": {
+    "eyebrow": "Portfolio",
+    "title": "Dự án",
+    "highlight": "nổi bật",
+    "subtitle": "Case study chọn lọc — hình ảnh dẫn dắt, kết quả đo được.",
+    "viewAll": "Xem tất cả"
+  },
+  "ServicesSection": {
+    "eyebrow": "Dịch vụ",
+    "title": "Trải nghiệm số rõ ràng, bền vững — từ website đến AI.",
+    "subtitle": "Một đối tác cho chuyển đổi số: thiết kế, xây dựng và vận hành giải pháp đo được kết quả.",
+    "cta": "Xem dịch vụ",
+    "viewDetail": "Xem chi tiết"
+  },
+  "ServicesPage": {
+    "title": "Dịch vụ",
+    "subtitle": "Chọn giải pháp phù hợp giai đoạn — có thể kết hợp nhiều module.",
+    "detail": "Chi tiết",
+    "highlights": "Điểm nổi bật",
+    "getConsult": "Nhận tư vấn",
+    "allServices": "Tất cả dịch vụ"
+  },
+  "Process": {
+    "eyebrow": "Quy trình",
+    "title": "Quy trình làm việc",
+    "highlight": "chuyên nghiệp",
+    "subtitle": "Từ buổi trao đổi đầu tiên đến go-live và vận hành — mỗi giai đoạn đều có mốc rõ ràng, tài liệu và người phụ trách.",
+    "tablistAria": "Các giai đoạn dự án",
+    "stepOf": "Bước {step} / {total}",
+    "durationLabel": "Thời gian tham khảo: {duration}",
+    "deliverablesHeading": "Kết quả bàn giao giai đoạn",
+    "deliverablesAria": "Kết quả bàn giao",
+    "steps": {
+      "1": {
+        "title": "Khám phá",
+        "desc": "Tư vấn & phân tích nhu cầu (miễn phí)",
+        "duration": "1–2 tuần",
+        "tag": "Discovery",
+        "deliverables": ["Workshop khám phá", "Bản ghi nhận hiện trạng", "Ưu tiên & phạm vi MVP"]
+      },
+      "2": {
+        "title": "Thiết kế",
+        "desc": "UI/UX wireframe & prototype",
+        "duration": "2–3 tuần",
+        "tag": "Design",
+        "deliverables": ["User flow & IA", "Wireframe trung fidel", "Prototype tương tác"]
+      },
+      "3": {
+        "title": "Phát triển",
+        "desc": "Agile sprint, báo cáo hàng tuần",
+        "duration": "Theo phạm vi",
+        "tag": "Build",
+        "deliverables": ["Sprint theo milestone", "CI/CD & staging", "Demo định kỳ"]
+      },
+      "4": {
+        "title": "Kiểm thử",
+        "desc": "QA, UAT, performance testing",
+        "duration": "1–2 tuần",
+        "tag": "Quality",
+        "deliverables": ["Test plan & báo cáo bug", "UAT cùng team bạn", "Hiệu năng & bảo mật"]
+      },
+      "5": {
+        "title": "Ra mắt & hỗ trợ",
+        "desc": "Go-live + bảo trì & training",
+        "duration": "Liên tục",
+        "tag": "Launch",
+        "deliverables": ["Go-live checklist", "Handover & tài liệu", "Gói bảo trì / SLA"]
+      }
+    }
+  },
+  "Stats": {
+    "items": {
+      "projects": "Dự án hoàn thành",
+      "satisfaction": "Khách hàng hài lòng",
+      "years": "Năm kinh nghiệm",
+      "chatbotUsers": "Users chatbot / tháng"
+    }
+  },
+  "Pricing": {
+    "eyebrow": "Pricing",
+    "title": "Gói phù hợp",
+    "highlight": "mọi quy mô",
+    "subtitle": "Liên hệ để nhận báo giá chi tiết theo phạm vi.",
+    "popular": "Phổ biến nhất",
+    "cta": "Nhận báo giá",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "audience": "SME, startup",
+        "desc": "Website cơ bản + CMS",
+        "features": ["Landing / corporate site", "CMS chỉnh sửa nội dung", "Hosting guidance", "SEO nền tảng"],
+        "missing": ["CRM tùy chỉnh", "ERP"]
+      },
+      "professional": {
+        "name": "Professional",
+        "audience": "Doanh nghiệp vừa",
+        "desc": "Website + CRM hoặc ERP",
+        "features": ["Full website / headless", "CRM hoặc ERP module", "Tích hợp API", "SLA phản hồi 24h"],
+        "missing": []
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "audience": "Tập đoàn",
+        "desc": "Full suite + AI",
+        "features": ["Multi-product rollout", "CRM + ERP + AI", "Dedicated team", "On-prem / hybrid"],
+        "missing": []
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "subtitle": "Insight và best practices — cập nhật định kỳ.",
+    "readMore": "Đọc bài →",
+    "demoBody": "(Nội dung demo.) Bài viết đầy đủ có thể kết nối CMS hoặc MDX sau. Royal Solution đồng hành triển khai headless CMS và SEO cho blog doanh nghiệp.",
+    "discussCta": "Trao đổi triển khai blog & SEO →",
+    "back": "← Quay lại danh sách"
+  },
+  "CTABanner": {
+    "title": "Sẵn sàng chuyển đổi số doanh nghiệp của bạn?",
+    "subtitle": "Nhận tư vấn miễn phí từ đội ngũ chuyên gia — không cam kết, không phí ẩn.",
+    "ctaPrimary": "Đặt lịch tư vấn miễn phí",
+    "ctaSecondary": "Xem portfolio"
+  },
+  "TrustedBy": {
+    "eyebrow": "Được tin dùng",
+    "title": "Được tin dùng bởi {count}+ doanh nghiệp"
+  },
+  "TechStack": {
+    "eyebrow": "Stack",
+    "title": "Công nghệ chúng tôi",
+    "highlight": "sử dụng",
+    "subtitle": "Chọn công cụ phù hợp bài toán — không áp đặt nhà cung cấp."
+  },
+  "ContactPage": {
+    "title": "Liên hệ",
+    "subtitle": "Điền form — chúng tôi phản hồi trong vòng 2 giờ làm việc.",
+    "badge": "Phản hồi trong vòng 2 giờ"
+  },
+  "ContactForm": {
+    "name": "Họ tên *",
+    "email": "Email *",
+    "phone": "Số điện thoại",
+    "service": "Dịch vụ quan tâm",
+    "companySize": "Quy mô công ty",
+    "message": "Mô tả nhu cầu *",
+    "select": "Chọn",
+    "submit": "Gửi yêu cầu",
+    "submitting": "Đang gửi…",
+    "submitAgain": "Gửi thêm yêu cầu",
+    "successToast": "Đã ghi nhận — đội ngũ sẽ phản hồi trong 2 giờ làm việc.",
+    "services": {
+      "website": "Website / CMS",
+      "crm": "CRM",
+      "erp": "ERP",
+      "ai": "AI / Chatbot",
+      "dashboard": "Dashboard & Báo cáo",
+      "ml": "ML / AI",
+      "other": "Khác"
+    },
+    "sizes": {
+      "lt10": "< 10 nhân sự",
+      "10-50": "10 – 50",
+      "50-200": "50 – 200",
+      "200p": "200+"
+    }
+  },
+  "PortfolioPage": {
+    "title": "Portfolio",
+    "subtitle": "Một phần dự án đã công bố — chi tiết có thể chia sẻ khi trao đổi NDA.",
+    "discuss": "Trao đổi tương tự →"
+  },
+  "About": {
+    "eyebrow": "Về chúng tôi",
+    "title": "Royal Solution",
+    "lead": "Công ty SaaS Việt Nam xây dựng CRM, ERP và giải pháp AI cho doanh nghiệp vừa và nhỏ.",
+    "introTitle": "Giới thiệu chung",
+    "introBody": "Royal Solution là công ty phần mềm dịch vụ Việt Nam, được sáng lập vào tháng 11 năm 2025 bởi ông Khoa, một nhà lãnh đạo sản phẩm và công nghệ có hơn 15 năm kinh nghiệm trong ngành ngân hàng, fintech và AI tại Việt Nam và Hàn Quốc. Công ty tập trung phục vụ phân khúc doanh nghiệp vừa và nhỏ, nhóm khách hàng đóng vai trò xương sống của nền kinh tế Việt Nam nhưng lâu nay bị kẹt giữa hai lựa chọn không phù hợp, hoặc là các nền tảng ngoại quá lớn và quá đắt, hoặc là các phần mềm nội địa chỉ đáp ứng nghĩa vụ kế toán tối thiểu.",
+    "missionTitle": "Sứ mệnh",
+    "missionBody": "Chúng tôi tin rằng doanh nghiệp SME Việt Nam xứng đáng có công cụ phần mềm được thiết kế theo đúng cách họ bán hàng, vận hành và tăng trưởng, thay vì các phiên bản bản địa hóa sơ sài gắn thêm vào nền tảng ngoại. Sứ mệnh của Royal Solution là thu hẹp khoảng cách này, mang chuẩn mực kiến trúc, dữ liệu và quản trị rủi ro của doanh nghiệp lớn đến với mức chi phí và tốc độ triển khai phù hợp cho SME.",
+    "originTitle": "Nguồn gốc",
+    "originBody": "Royal Solution là công ty thứ hai của người sáng lập. Trước đó, ông Khoa đã sáng lập Micro Solution vào năm 2020 và vận hành công ty này đến đầu năm 2026. Năm năm xây dựng phần mềm cho doanh nghiệp Việt Nam đã giúp đội ngũ hiểu rõ những khoảng trống thực sự của thị trường, cũng như hiểu được điều gì tạo nên một mô hình phục vụ SME bền vững. Royal Solution ra đời chính là nơi những bài học đó được áp dụng ở một tầm vóc và chiều sâu sản phẩm cao hơn.",
+    "productsTitle": "Danh mục sản phẩm và giải pháp",
+    "productsLead": "Danh mục của Royal Solution được tổ chức thành các lớp giá trị mà một SME hiện đại cần đến trên hành trình chuyển đổi số và ứng dụng AI.",
+    "layers": {
+      "crmErp": {
+        "title": "Sản phẩm lõi CRM và ERP",
+        "body": "Đây là nền tảng chính của công ty, được thiết kế cho quy trình bán hàng, vận hành và tăng trưởng đặc thù của SME Việt Nam."
+      },
+      "training": {
+        "title": "Đào tạo và nâng cao năng lực AI cho đội ngũ",
+        "body": "Chương trình VABIX AI-First Workforce Training (AFET-W™) và nền tảng SaaS PromptHub giúp doanh nghiệp chuyển đổi đội ngũ theo hướng AI-First một cách có phương pháp, không dừng ở việc dùng công cụ đơn lẻ."
+      },
+      "clearai": {
+        "title": "Công cụ ra quyết định và kiểm soát chất lượng AI",
+        "body": "Sản phẩm ClearAI chuyên chất vấn và làm rõ đầu ra của các mô hình AI, giúp lãnh đạo doanh nghiệp tin cậy khi đưa AI vào công việc thực tế."
+      },
+      "architect": {
+        "title": "Nền tảng kiến trúc và vận hành kỹ thuật",
+        "body": "RS Architect phục vụ quản trị kiến trúc doanh nghiệp, đi kèm các giải pháp chuyên biệt như LOS scoring cho lĩnh vực tín dụng và giải pháp phiên âm âm thanh ứng dụng AI cho các ngành có nhu cầu xử lý dữ liệu hội thoại lớn."
+      },
+      "automation": {
+        "title": "Tự động hóa và tích hợp kênh vận hành",
+        "body": "Các pipeline tự động hóa xây dựng trên n8n phục vụ đồng bộ dữ liệu Zalo OA và các kênh khách hàng khác, giúp SME kết nối dữ liệu từ nhiều nguồn vào một trục vận hành thống nhất."
+      }
+    },
+    "differenceTitle": "Điểm khác biệt",
+    "differenceBody": "Điều làm Royal Solution khác biệt không phải là số lượng tính năng, mà là cách công ty được xây dựng. Nền tảng kỹ thuật của chúng tôi kế thừa kỷ luật kiến trúc và quản trị rủi ro từ môi trường ngân hàng và fintech quy mô lớn, nơi người sáng lập từng đảm nhận các vai trò sản phẩm và công nghệ tại FE Credit, VIB, Home Credit Việt Nam và giữ vai trò Head of AI Product tại AI+DI. Tuy nhiên, cách chúng tôi triển khai cho khách hàng lại giữ đúng tinh thần thực dụng và tốc độ của một công ty phục vụ SME, với mức chi phí phù hợp cho doanh nghiệp đang tăng trưởng.",
+    "cta": "Trao đổi dự án"
+  },
+  "Services": {
+    "website-cms": {
+      "title": "Website & CMS",
+      "shortTitle": "Website & CMS",
+      "description": "Thiết kế và phát triển website chuyên nghiệp, tối ưu SEO, tích hợp CMS linh hoạt (WordPress, Strapi, Sanity, headless custom).",
+      "features": ["Headless CMS", "SEO-ready", "Core Web Vitals", "Responsive 100%"]
+    },
+    "crm": {
+      "title": "CRM — Quản lý khách hàng",
+      "shortTitle": "CRM",
+      "description": "Hệ thống CRM tùy chỉnh theo quy trình kinh doanh, tự động hóa sales pipeline, theo dõi khách hàng 360°.",
+      "features": ["Pipeline rõ ràng", "Email automation", "Báo cáo realtime", "Tích hợp Zalo/Email"]
+    },
+    "erp": {
+      "title": "ERP — Quản trị doanh nghiệp",
+      "shortTitle": "ERP",
+      "description": "Triển khai ERP toàn diện: kế toán, kho hàng, nhân sự, mua hàng — một nền tảng duy nhất.",
+      "features": ["Kế toán & tài chính", "Quản lý kho", "HRM & chấm công", "Multi-branch"]
+    },
+    "ai-chatbot": {
+      "title": "AI & Chatbot",
+      "shortTitle": "AI & Chatbot",
+      "description": "Chatbot AI thế hệ mới (GPT-powered), hoạt động 24/7, đa kênh: web, Zalo, Messenger, Telegram.",
+      "features": ["LLM tùy chỉnh", "RAG knowledge base", "Omnichannel", "Analytics & training"]
+    },
+    "reporting-dashboard": {
+      "title": "Dashboard & Báo cáo",
+      "shortTitle": "Dashboard",
+      "description": "Dashboard tùy chỉnh theo KPI: tổng hợp dữ liệu đa nguồn, cảnh báo, xuất báo cáo — giúp lãnh đạo ra quyết định nhanh và minh bạch.",
+      "features": ["Trực quan hóa dữ liệu", "Báo cáo tự động", "Tích hợp đa nguồn", "Xuất dữ liệu linh hoạt"]
+    },
+    "ml-ai": {
+      "title": "ML / AI",
+      "shortTitle": "ML / AI",
+      "description": "Xây dựng và triển khai mô hình học máy phù hợp dữ liệu nội bộ: dự báo, phân loại, phát hiện bất thường, gợi ý — tích hợp API/MLOps và giám sát hiệu năng.",
+      "features": ["Dự báo & phân loại theo domain", "MLOps & versioning mô hình", "Tích hợp API / batch pipeline", "On-prem hoặc cloud tuỳ chính sách"]
+    }
+  },
+  "Portfolio": {
+    "1": {
+      "title": "E-commerce Website + CMS",
+      "tags": ["Website", "CMS"],
+      "industry": "Thời trang",
+      "location": "Hà Nội",
+      "metric": "⬆ 180% lead sau 3 tháng",
+      "excerpt": "Headless storefront và CMS cho đội marketing tự vận hành."
+    },
+    "2": {
+      "title": "CRM tùy chỉnh cho môi giới",
+      "tags": ["CRM"],
+      "industry": "Bất động sản",
+      "location": "",
+      "metric": "700+ môi giới trên một nền tảng",
+      "excerpt": "Pipeline và báo cáo realtime theo từng khu vực."
+    },
+    "3": {
+      "title": "ERP sản xuất thực phẩm",
+      "tags": ["ERP"],
+      "industry": "Sản xuất",
+      "location": "Bình Dương",
+      "metric": "−32% lệch tồn kho",
+      "excerpt": "Kế hoạch sản xuất, QC và kho tích hợp."
+    },
+    "4": {
+      "title": "Chatbot AI CSKH ngân hàng",
+      "tags": ["AI"],
+      "industry": "Ngân hàng",
+      "location": "",
+      "metric": "50k+ user/tháng",
+      "excerpt": "RAG trên quy định nội bộ, bàn giao agent khi cần."
+    },
+    "5": {
+      "title": "Headless CMS — truyền thông",
+      "tags": ["Website", "CMS"],
+      "industry": "Media",
+      "location": "",
+      "metric": "Publish < 5 phút/bài",
+      "excerpt": "Đồng bộ đa site, đa ngôn ngữ."
+    },
+    "6": {
+      "title": "AI Data Analytics Dashboard",
+      "tags": ["AI"],
+      "industry": "Fintech",
+      "location": "",
+      "metric": "SLA báo cáo < 60s",
+      "excerpt": "Pipeline dữ liệu và cảnh báo gian lận."
+    }
+  },
+  "Blog": {
+    "ai-chatbot-2025": {
+      "title": "AI Chatbot 2025: Tại sao 80% doanh nghiệp cần triển khai ngay",
+      "excerpt": "Chi phí vận hành CSKH, RAG và kỳ vọng khách hàng đang thay đổi."
+    },
+    "erp-odoo-sap-custom": {
+      "title": "So sánh ERP: Odoo vs SAP vs Custom — Cái nào phù hợp với bạn?",
+      "excerpt": "Ma trận quyết định theo quy mô, ngành và độ tùy chỉnh."
+    },
+    "headless-cms-la-gi": {
+      "title": "Headless CMS là gì? Tại sao nên dùng thay WordPress monolith?",
+      "excerpt": "Tách content khỏi presentation — lợi ích cho đội marketing và dev."
+    },
+    "crm-sme-vietnam": {
+      "title": "CRM và bài toán quản lý khách hàng của SME Việt Nam",
+      "excerpt": "Pipeline đơn giản nhưng đủ đo — tránh phần mềm quá nặng."
+    },
+    "rag-vs-finetuning": {
+      "title": "RAG vs Fine-tuning: Chọn chiến lược AI nào cho doanh nghiệp?",
+      "excerpt": "Khi nào cần huấn luyện lại mô hình, khi nào chỉ cần knowledge base."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 188" role="img" aria-label="Royal Solution">
+  <title>Royal Solution</title>
+  <defs>
+    <linearGradient id="orb" x1="30%" y1="15%" x2="75%" y2="90%">
+      <stop offset="0%" stop-color="#7eb2ff"/>
+      <stop offset="45%" stop-color="#4d8ef0"/>
+      <stop offset="100%" stop-color="#1a5fd4"/>
+    </linearGradient>
+    <linearGradient id="orbCore" x1="35%" y1="25%" x2="70%" y2="85%">
+      <stop offset="0%" stop-color="#cfe3ff"/>
+      <stop offset="100%" stop-color="#6aa0f5"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0c878"/>
+      <stop offset="50%" stop-color="#c5a059"/>
+      <stop offset="100%" stop-color="#a8863a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: three linked orbs + crown -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M58 128 L92 92 L126 56" stroke="#5a9aef" stroke-width="3" opacity="0.55"/>
+
+    <!-- small orb -->
+    <circle cx="58" cy="128" r="18" fill="url(#orb)"/>
+    <circle cx="58" cy="128" r="9" fill="url(#orbCore)"/>
+    <circle cx="58" cy="128" r="18" stroke="#9ec4ff" stroke-width="1.5" opacity="0.45"/>
+
+    <!-- mid orb -->
+    <circle cx="92" cy="92" r="24" fill="url(#orb)"/>
+    <circle cx="92" cy="92" r="12" fill="url(#orbCore)"/>
+    <circle cx="92" cy="92" r="24" stroke="#9ec4ff" stroke-width="1.75" opacity="0.5"/>
+
+    <!-- large orb -->
+    <circle cx="126" cy="56" r="30" fill="url(#orb)"/>
+    <circle cx="126" cy="56" r="15" fill="url(#orbCore)"/>
+    <circle cx="126" cy="56" r="30" stroke="#b6d4ff" stroke-width="2" opacity="0.55"/>
+
+    <!-- crown -->
+    <path
+      d="M112 28 L118 38 L126 24 L134 38 L140 28 L138 42 L114 42 Z"
+      fill="url(#gold)"
+      stroke="#e8d49a"
+      stroke-width="1"
+      stroke-linejoin="round"
+    />
+    <circle cx="112" cy="27" r="2.2" fill="#e8d49a"/>
+    <circle cx="126" cy="22" r="2.4" fill="#f0e0a8"/>
+    <circle cx="140" cy="27" r="2.2" fill="#e8d49a"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-weight="900" letter-spacing="0.04em">
+    <text x="176" y="72" fill="#ffffff" font-size="42">ROYAL</text>
+    <text x="176" y="118" fill="url(#gold)" font-size="42">SOLUTION</text>
+  </g>
+  <rect x="176" y="128" width="220" height="2.5" rx="1" fill="url(#gold)"/>
+  <text
+    x="176"
+    y="152"
+    fill="#d4d4d8"
+    font-family="Helvetica Neue, Arial, sans-serif"
+    font-size="13"
+    font-weight="600"
+    letter-spacing="0.22em"
+  >TECHNOLOGY SOLUTIONS</text>
+</svg>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,14 +16,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { BrandLogo } from "@/components/brand-logo";
+import { LanguageSwitcher } from "@/components/marketing/LanguageSwitcher";
 import { cn } from "@/lib/utils";
-import { SERVICE_OFFERINGS } from "@/lib/data/marketing-services";
-
-const NAV = [
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "Về chúng tôi" },
-  { href: "/contact", label: "Liên hệ" },
-];
+import { localizeServices } from "@/lib/i18n/marketing";
 
 function NavLink({
   href,
@@ -54,9 +50,18 @@ function NavLink({
 }
 
 export function SiteHeader() {
+  const t = useTranslations("Nav");
+  const tServices = useTranslations("Services");
   const pathname = usePathname() ?? "";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const services = localizeServices(tServices);
+
+  const NAV = [
+    { href: "/portfolio", label: t("portfolio") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -79,11 +84,7 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="flex min-w-0 shrink items-center"
-          aria-label="Royal Solution — trang chủ"
-        >
+        <Link href="/" className="flex min-w-0 shrink items-center" aria-label={t("homeAria")}>
           <BrandLogo height={32} plate={false} className="sm:hidden" />
           <BrandLogo height={36} plate={false} className="hidden sm:inline-flex" />
         </Link>
@@ -93,11 +94,11 @@ export function SiteHeader() {
             <NavigationMenuList className="gap-0">
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="h-9 bg-transparent text-[0.9375rem] font-semibold text-white/70 hover:bg-white/10 hover:text-white focus:bg-white/10 data-[state=open]:bg-white/10 data-[state=open]:text-white">
-                  Dịch vụ
+                  {t("services")}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="left-0 top-full z-50 mt-2 w-[min(calc(100vw-2rem),560px)] max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border border-zinc-200 bg-white p-4 shadow-xl md:w-[min(calc(100vw-2rem),560px)] md:p-5">
                   <div className="grid min-w-0 gap-3 sm:grid-cols-2">
-                    {SERVICE_OFFERINGS.map((s) => (
+                    {services.map((s) => (
                       <NavigationMenuLink key={s.slug} asChild>
                         <Link
                           href={`/services/${s.slug}`}
@@ -121,7 +122,7 @@ export function SiteHeader() {
                     href="/services"
                     className="mt-4 block text-center text-sm font-medium text-brand-navy hover:text-[#C5A059]"
                   >
-                    Xem tất cả dịch vụ →
+                    {t("viewAllServices")}
                   </Link>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -138,71 +139,75 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSwitcher variant="header" />
           <Button
             asChild
             className="h-10 min-h-10 cursor-pointer rounded-xl bg-cta px-5 text-sm font-semibold text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1931]"
           >
-            <Link href="/contact">Nhận Tư Vấn Miễn Phí</Link>
+            <Link href="/contact">{t("ctaConsult")}</Link>
           </Button>
         </div>
 
-        <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-          <SheetTrigger asChild className="lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-11 shrink-0 text-white hover:bg-white/10 hover:text-white"
-              aria-label="Mở menu"
-            >
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent
-            side="right"
-            className="flex w-[min(100vw,380px)] flex-col overflow-y-auto border-zinc-200 bg-white p-0"
-          >
-            <SheetTitle className="sr-only">Menu điều hướng</SheetTitle>
-            <nav className="flex flex-1 flex-col gap-1 p-6 pt-14" aria-label="Mobile">
-              <Link
-                href="/services"
-                onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-50"
+        <div className="flex items-center gap-1 lg:hidden">
+          <LanguageSwitcher variant="header" />
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="size-11 shrink-0 text-white hover:bg-white/10 hover:text-white"
+                aria-label={t("openMenu")}
               >
-                Dịch vụ
-              </Link>
-              <div className="mb-2 flex flex-col border-l border-zinc-200 py-1 pl-3">
-                {SERVICE_OFFERINGS.map((s) => (
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="flex w-[min(100vw,380px)] flex-col overflow-y-auto border-zinc-200 bg-white p-0"
+            >
+              <SheetTitle className="sr-only">{t("mobileMenu")}</SheetTitle>
+              <nav className="flex flex-1 flex-col gap-1 p-6 pt-14" aria-label="Mobile">
+                <Link
+                  href="/services"
+                  onClick={() => setMobileOpen(false)}
+                  className="rounded-lg px-3 py-3 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-50"
+                >
+                  {t("services")}
+                </Link>
+                <div className="mb-2 flex flex-col border-l border-zinc-200 py-1 pl-3">
+                  {services.map((s) => (
+                    <Link
+                      key={s.slug}
+                      href={`/services/${s.slug}`}
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-md px-3 py-2.5 text-[0.9375rem] text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+                    >
+                      {s.title}
+                    </Link>
+                  ))}
+                </div>
+                {NAV.map((item) => (
                   <Link
-                    key={s.slug}
-                    href={`/services/${s.slug}`}
+                    key={item.href}
+                    href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="rounded-md px-3 py-2.5 text-[0.9375rem] text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+                    className="rounded-lg px-3 py-3 text-[0.9375rem] font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
                   >
-                    {s.title}
+                    {item.label}
                   </Link>
                 ))}
-              </div>
-              {NAV.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-[0.9375rem] font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+                <Button
+                  asChild
+                  className="mt-4 h-12 w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
                 >
-                  {item.label}
-                </Link>
-              ))}
-              <Button
-                asChild
-                className="mt-4 h-12 w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
-              >
-                <Link href="/contact" onClick={() => setMobileOpen(false)}>
-                  Nhận Tư Vấn Miễn Phí
-                </Link>
-              </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+                  <Link href="/contact" onClick={() => setMobileOpen(false)}>
+                    {t("ctaConsult")}
+                  </Link>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

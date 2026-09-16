@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { submitContactForm } from "@/app/actions/contact";
@@ -19,7 +20,11 @@ import { cn } from "@/lib/utils";
 const inputClass =
   "border-zinc-200 bg-white text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-brand-orange";
 
+const SERVICE_VALUES = ["website", "crm", "erp", "ai", "dashboard", "ml", "other"] as const;
+const SIZE_VALUES = ["lt10", "10-50", "50-200", "200p"] as const;
+
 export function ContactForm() {
+  const t = useTranslations("ContactForm");
   const [isPending, startTransition] = useTransition();
   const [submitted, setSubmitted] = useState(false);
 
@@ -43,7 +48,7 @@ export function ContactForm() {
         return;
       }
       setSubmitted(true);
-      toast.success("Đã ghi nhận — đội ngũ sẽ phản hồi trong 2 giờ làm việc.");
+      toast.success(t("successToast"));
       form.reset();
     });
   }
@@ -56,7 +61,7 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Họ tên *</FormLabel>
+              <FormLabel className="text-zinc-700">{t("name")}</FormLabel>
               <FormControl>
                 <Input className={inputClass} autoComplete="name" {...field} />
               </FormControl>
@@ -69,7 +74,7 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Email *</FormLabel>
+              <FormLabel className="text-zinc-700">{t("email")}</FormLabel>
               <FormControl>
                 <Input type="email" className={inputClass} autoComplete="email" {...field} />
               </FormControl>
@@ -82,7 +87,7 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Số điện thoại</FormLabel>
+              <FormLabel className="text-zinc-700">{t("phone")}</FormLabel>
               <FormControl>
                 <Input className={inputClass} autoComplete="tel" {...field} />
               </FormControl>
@@ -95,21 +100,19 @@ export function ContactForm() {
           name="service"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Dịch vụ quan tâm</FormLabel>
+              <FormLabel className="text-zinc-700">{t("service")}</FormLabel>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger className={cn(inputClass, "w-full")}>
-                    <SelectValue placeholder="Chọn" />
+                    <SelectValue placeholder={t("select")} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="border-zinc-200 bg-white text-zinc-900">
-                  <SelectItem value="website">Website / CMS</SelectItem>
-                  <SelectItem value="crm">CRM</SelectItem>
-                  <SelectItem value="erp">ERP</SelectItem>
-                  <SelectItem value="ai">AI / Chatbot</SelectItem>
-                  <SelectItem value="dashboard">Dashboard & Báo cáo</SelectItem>
-                  <SelectItem value="ml">ML / AI</SelectItem>
-                  <SelectItem value="other">Khác</SelectItem>
+                  {SERVICE_VALUES.map((value) => (
+                    <SelectItem key={value} value={value}>
+                      {t(`services.${value}`)}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -121,18 +124,19 @@ export function ContactForm() {
           name="companySize"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Quy mô công ty</FormLabel>
+              <FormLabel className="text-zinc-700">{t("companySize")}</FormLabel>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger className={cn(inputClass, "w-full")}>
-                    <SelectValue placeholder="Chọn" />
+                    <SelectValue placeholder={t("select")} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="border-zinc-200 bg-white text-zinc-900">
-                  <SelectItem value="lt10">&lt; 10 nhân sự</SelectItem>
-                  <SelectItem value="10-50">10 – 50</SelectItem>
-                  <SelectItem value="50-200">50 – 200</SelectItem>
-                  <SelectItem value="200p">200+</SelectItem>
+                  {SIZE_VALUES.map((value) => (
+                    <SelectItem key={value} value={value}>
+                      {t(`sizes.${value}`)}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -144,7 +148,7 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-700">Mô tả nhu cầu *</FormLabel>
+              <FormLabel className="text-zinc-700">{t("message")}</FormLabel>
               <FormControl>
                 <Textarea rows={5} className={inputClass} {...field} />
               </FormControl>
@@ -159,7 +163,7 @@ export function ContactForm() {
           aria-busy={isPending}
           className="w-full cursor-pointer rounded-xl bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isPending ? "Đang gửi…" : submitted ? "Gửi thêm yêu cầu" : "Gửi yêu cầu"}
+          {isPending ? t("submitting") : submitted ? t("submitAgain") : t("submit")}
         </Button>
       </form>
     </Form>

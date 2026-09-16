@@ -1,13 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
-import { PORTFOLIO_PROJECTS } from "@/lib/data/marketing-portfolio";
 import { SectionHeading } from "@/components/marketing/common/SectionHeading";
 import { PortfolioBento } from "@/components/marketing/common/PortfolioBento";
+import { localizePortfolio } from "@/lib/i18n/marketing";
 
 export function PortfolioPreview() {
-  const projects = PORTFOLIO_PROJECTS.slice(0, 6);
+  const t = useTranslations("PortfolioPreview");
+  const tPortfolio = useTranslations("Portfolio");
+  const projects = localizePortfolio(tPortfolio).slice(0, 6);
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
@@ -15,16 +18,16 @@ export function PortfolioPreview() {
         <div className="flex flex-col items-start justify-between gap-4 sm:gap-6 md:flex-row md:items-end">
           <SectionHeading
             align="left"
-            eyebrow="Portfolio"
-            title="Dự án"
-            highlight="nổi bật"
-            subtitle="Case study chọn lọc — hình ảnh dẫn dắt, kết quả đo được."
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            highlight={t("highlight")}
+            subtitle={t("subtitle")}
           />
           <Link
             href="/portfolio"
             className="inline-flex cursor-pointer items-center gap-1 text-sm font-semibold text-brand-navy transition-colors duration-200 hover:text-brand-orange"
           >
-            Xem tất cả <ArrowUpRight className="h-4 w-4" aria-hidden />
+            {t("viewAll")} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
 

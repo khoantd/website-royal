@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/brand-logo";
+import { LanguageSwitcher } from "@/components/marketing/LanguageSwitcher";
 import { Facebook, Github, Linkedin, Youtube } from "lucide-react";
 
 const social = [
@@ -14,15 +16,18 @@ const social = [
 ];
 
 export function SiteFooter() {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Nav");
+
   return (
     <footer className="border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="inline-flex" aria-label="Royal Solution — trang chủ">
+            <Link href="/" className="inline-flex" aria-label={tNav("homeAria")}>
               <BrandLogo height={40} />
             </Link>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-600">Đối tác công nghệ đáng tin cậy cho chuyển đổi số.</p>
+            <p className="mt-3 text-sm leading-relaxed text-zinc-600">{t("tagline")}</p>
             <div className="mt-6 flex gap-3">
               {social.map((s) => (
                 <a
@@ -39,7 +44,7 @@ export function SiteFooter() {
 
           <div>
             <h4 className="font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-wider text-zinc-900">
-              Dịch vụ
+              {t("services")}
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-zinc-600">
               <li>
@@ -64,7 +69,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/services" className="hover:text-zinc-900">
-                  Tư vấn công nghệ
+                  {t("consulting")}
                 </Link>
               </li>
             </ul>
@@ -72,17 +77,17 @@ export function SiteFooter() {
 
           <div>
             <h4 className="font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-wider text-zinc-900">
-              Công ty
+              {t("company")}
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-zinc-600">
               <li>
                 <Link href="/about" className="hover:text-zinc-900">
-                  Về chúng tôi
+                  {t("about")}
                 </Link>
               </li>
               <li>
                 <Link href="/portfolio" className="hover:text-zinc-900">
-                  Portfolio
+                  {t("portfolio")}
                 </Link>
               </li>
             </ul>
@@ -90,10 +95,10 @@ export function SiteFooter() {
 
           <div>
             <h4 className="font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-wider text-zinc-900">
-              Liên hệ
+              {t("contact")}
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-zinc-600">
-              <li>📍 TP. Hồ Chí Minh, Việt Nam</li>
+              <li>📍 {t("location")}</li>
               <li>
                 <a href="tel:+84901234567" className="hover:text-zinc-900">
                   📞 +84 901 234 567
@@ -108,7 +113,7 @@ export function SiteFooter() {
             <form className="mt-6 flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
               <Input
                 type="email"
-                placeholder="Email nhận tin"
+                placeholder={t("newsletterPlaceholder")}
                 className="border-zinc-200 bg-white text-zinc-900 placeholder:text-zinc-400"
               />
               <Button
@@ -116,23 +121,15 @@ export function SiteFooter() {
                 variant="secondary"
                 className="w-full cursor-pointer bg-cta text-cta-foreground transition-colors duration-200 hover:bg-[#C5A059] focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2"
               >
-                Đăng ký
+                {t("subscribe")}
               </Button>
             </form>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 text-sm text-zinc-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} Royal Solution. All rights reserved.</p>
-          <div className="flex gap-4">
-            <button type="button" className="text-zinc-600 hover:text-zinc-900">
-              VI
-            </button>
-            <span className="text-zinc-300">|</span>
-            <button type="button" className="hover:text-zinc-900">
-              EN
-            </button>
-          </div>
+          <p>{t("rights", { year: new Date().getFullYear() })}</p>
+          <LanguageSwitcher variant="footer" />
         </div>
       </div>
     </footer>

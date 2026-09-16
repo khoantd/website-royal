@@ -1,18 +1,28 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
 import { LOGO_NAMES } from "@/lib/data/marketing-misc";
 
 export function TrustedBy() {
+  const t = useTranslations("TrustedBy");
   const row = [...LOGO_NAMES, ...LOGO_NAMES];
 
   return (
     <section className="border-y border-zinc-200 bg-white py-12">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8">
-        <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-zinc-500">Được tin dùng</p>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        className="mx-auto max-w-[1280px] px-4 text-center sm:px-6 lg:px-8"
+      >
+        <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-zinc-500">
+          {t("eyebrow")}
+        </p>
         <p className="mt-2 font-[family-name:var(--font-display)] text-lg font-semibold text-zinc-600">
-          Được tin dùng bởi <span className="text-zinc-900">200+</span> doanh nghiệp
+          {t("title", { count: 200 })}
         </p>
       </motion.div>
 
